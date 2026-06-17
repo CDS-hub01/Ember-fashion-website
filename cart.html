@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Bag — EMBER</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=DM+Sans:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="nav" id="navbar">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo">EMBER</a>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="shop.html" class="nav-link">Shop</a></li>
+          <li><a href="lookbook.html" class="nav-link">Lookbook</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li>
+            <a href="cart.html" class="nav-link active">
+              Bag <span class="cart-badge" id="cartBadge">0</span>
+            </a>
+          </li>
+        </ul>
+        <button
+          class="hamburger"
+          id="hamburger"
+          aria-label="Open menu"
+          aria-expanded="false"
+        >
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </nav>
+
+    <section class="section page-top">
+      <div class="container">
+        <div class="page-header">
+          <h1>Your Bag</h1>
+          <p id="cartItemCount">0 items</p>
+        </div>
+
+        <div class="cart-layout">
+          <!-- Cart Items -->
+          <div class="cart-items" id="cartItems">
+            <!-- JavaScript fills this -->
+          </div>
+
+          <!-- Cart Summary -->
+          <div class="cart-summary" id="cartSummary">
+            <!-- JavaScript fills this -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-bottom">
+          <p>© <span class="current-year"></span> EMBER. Built by CDS 💪</p>
+        </div>
+      </div>
+    </footer>
+
+    <div class="toast" id="toast"></div>
+    <script src="Fashion.js"></script>
+  </body>
+</html>

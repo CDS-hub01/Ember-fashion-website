@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lookbook — EMBER</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=DM+Sans:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="nav" id="navbar">
+      <div class="nav-inner">
+        <a href="Ember.html" class="nav-logo">EMBER</a>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="shop.html" class="nav-link">Shop</a></li>
+          <li><a href="lookbook.html" class="nav-link active">Lookbook</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li>
+            <a href="cart.html" class="nav-link">
+              Bag <span class="cart-badge" id="cartBadge">0</span>
+            </a>
+          </li>
+        </ul>
+        <button
+          class="hamburger"
+          id="hamburger"
+          aria-label="Open menu"
+          aria-expanded="false"
+        >
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Page Header -->
+    <div class="page-banner">
+      <div class="container">
+        <p class="hero-eyebrow">Autumn / Winter 2026</p>
+        <h1>The Lookbook</h1>
+        <p>Stories in fabric and form</p>
+      </div>
+    </div>
+
+    <!-- Lookbook Grid -->
+    <section class="section">
+      <div class="container">
+        <div class="lookbook-grid">
+          <img
+            src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=900"
+            alt="Editorial one"
+          />
+          <img
+            src="https://images.unsplash.com/photo-1485518882345-15568b007407?w=900"
+            alt="Editorial two"
+          />
+          <img
+            src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=900"
+            alt="Editorial three"
+          />
+          <img
+            src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?w=900"
+            alt="Editorial four"
+          />
+          <img
+            src="https://images.unsplash.com/photo-1516762689617-e1cffcef479d?w=900"
+            alt="Editorial five"
+          />
+          <img
+            src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=900"
+            alt="Editorial six"
+          />
+          <img
+            src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=900"
+            alt="Editorial seven"
+          />
+          <img
+            src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=900"
+            alt="Editorial eight"
+          />
+          <img
+            src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=900"
+            alt="Editorial nine"
+          />
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-bottom">
+          <p>© <span class="current-year"></span> EMBER. Built by CDS 💪</p>
+        </div>
+      </div>
+    </footer>
+
+    <div class="toast" id="toast"></div>
+    <script src="script.js"></script>
+  </body>
+</html>

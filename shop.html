@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=DM+Sans:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <title>Shop — EMBER</title>
+  </head>
+  <body>
+    <nav class="nav" id="navbar">
+      <div class="nav-inner">
+        <a href="Ember.html" class="nav-logo">EMBER</a>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="shop.html" class="nav-link active">Shop</a></li>
+          <li><a href="lookbook.html" class="nav-link">Lookbook</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li>
+            <a href="cart.html" class="nav-link">
+              Bag <span class="cart-badge" id="cartBadge">0</span>
+            </a>
+          </li>
+        </ul>
+        <button
+          class="hamburger"
+          id="hamburger"
+          aria-label="Open menu"
+          aria-expanded="false"
+        >
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </nav>
+
+    <section class="section page-top">
+      <div class="container">
+        <div class="page-header">
+          <h1>The Collection</h1>
+          <p>All pieces. Ready to ship.</p>
+        </div>
+
+        <!-- Filter and Sort Controls -->
+        <div class="shop-controls">
+          <div class="filter-buttons" id="filterButtons">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="outerwear">
+              Outerwear
+            </button>
+            <button class="filter-btn" data-filter="knitwear">Knitwear</button>
+            <button class="filter-btn" data-filter="tailoring">
+              Tailoring
+            </button>
+            <button class="filter-btn" data-filter="accessories">
+              Accessories
+            </button>
+          </div>
+          <select class="sort-select" id="sortSelect">
+            <option value="featured">Featured</option>
+            <option value="price-asc">Price: Low → High</option>
+            <option value="price-desc">Price: High → Low</option>
+            <option value="newest">Newest</option>
+          </select>
+        </div>
+
+        <!-- Products Grid -->
+        <div class="product-grid" id="shopGrid">
+          <!-- JavaScript fills this -->
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-bottom">
+          <p>© <span class="current-year"></span> EMBER. Built by CDS 💪</p>
+        </div>
+      </div>
+    </footer>
+
+    <div class="toast" id="toast"></div>
+    <script src="Fashion.js"></script>
+  </body>
+</html>
