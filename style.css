@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=DM+Sans:wght@400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=DM+Sans:wght@400;500&display=swap");
 
 :root {
   --bg: #1a1a1a;
@@ -9,8 +9,8 @@
   --muted: #8a8a85;
   --accent: #e85d3a;
   --accent-dark: #c44d2e;
-  --font-heading: 'Space Grotesk', sans-serif;
-  --font-body: 'DM Sans', sans-serif;
+  --font-heading: "Space Grotesk", sans-serif;
+  --font-body: "DM Sans", sans-serif;
   --max-width: 1400px;
   --shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
 }
@@ -27,6 +27,7 @@ html {
 }
 
 body {
+  overflow-x: hidden;
   font-family: var(--font-body);
   background: var(--bg);
   color: var(--text);
@@ -256,7 +257,7 @@ h3 {
   inset: 0;
   background:
     linear-gradient(rgba(26, 26, 26, 0.4) 0%, rgba(26, 26, 26, 0.75) 100%),
-    url('https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=1600')
+    url("https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=1600")
       center / cover no-repeat;
 }
 
