@@ -3,32 +3,32 @@
 // not every element exists on every page!
 // =====================================================
 
-const navbar = document.getElementById('navbar');
-const navLinks = document.getElementById('navLinks');
-const hamburger = document.getElementById('hamburger');
-const cartBadge = document.getElementById('cartBadge');
+const navbar = document.getElementById("navbar");
+const navLinks = document.getElementById("navLinks");
+const hamburger = document.getElementById("hamburger");
+const cartBadge = document.getElementById("cartBadge");
 
 // Home page elements
-const featuredGrid = document.getElementById('featuredGrid');
-const newsletterForm = document.getElementById('newsletterForm');
-const emailInput = document.getElementById('emailInput');
-const formMsg = document.getElementById('formMsg');
+const featuredGrid = document.getElementById("featuredGrid");
+const newsletterForm = document.getElementById("newsletterForm");
+const emailInput = document.getElementById("emailInput");
+const formMsg = document.getElementById("formMsg");
 
 // Shop page elements
-const shopGrid = document.getElementById('shopGrid');
-const sortSelect = document.getElementById('sortSelect');
+const shopGrid = document.getElementById("shopGrid");
+const sortSelect = document.getElementById("sortSelect");
 
 // Product detail page elements
-const productDetail = document.getElementById('productDetail');
-const relatedGrid = document.getElementById('relatedGrid');
+const productDetail = document.getElementById("productDetail");
+const relatedGrid = document.getElementById("relatedGrid");
 
 // Cart page elements
-const cartItems = document.getElementById('cartItems');
-const cartSummary = document.getElementById('cartSummary');
-const cartItemCount = document.getElementById('cartItemCount');
+const cartItems = document.getElementById("cartItems");
+const cartSummary = document.getElementById("cartSummary");
+const cartItemCount = document.getElementById("cartItemCount");
 
 // Toast notification
-const toast = document.getElementById('toast');
+const toast = document.getElementById("toast");
 
 // =====================================================
 // PRODUCT DATA — Array of Objects
@@ -40,56 +40,56 @@ const toast = document.getElementById('toast');
 const products = [
   {
     id: 1,
-    name: 'Shadow Overcoat',
-    category: 'outerwear',
+    name: "Shadow Overcoat",
+    category: "outerwear",
     price: 285000,
-    desc: 'A structured double-breasted overcoat in deep charcoal wool. Tailored for presence. Lined in silk.',
-    sizes: ['XS', 'S', 'M', 'L', 'XL'],
+    desc: "A structured double-breasted overcoat in deep charcoal wool. Tailored for presence. Lined in silk.",
+    sizes: ["XS", "S", "M", "L", "XL"],
     images: [
-      'https://images.unsplash.com/photo-1544022613-e87ca75a784a?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=800&q=80',
+      "https://images.unsplash.com/photo-1544022613-e87ca75a784a?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=800&q=80",
     ],
     featured: true,
     new: true,
   },
   {
     id: 2,
-    name: 'Ember Knit Turtleneck',
-    category: 'knitwear',
+    name: "Ember Knit Turtleneck",
+    category: "knitwear",
     price: 98000,
-    desc: 'Heavyweight ribbed knit in off-white merino wool. The kind of piece you reach for every time.',
-    sizes: ['XS', 'S', 'M', 'L', 'XL'],
+    desc: "Heavyweight ribbed knit in off-white merino wool. The kind of piece you reach for every time.",
+    sizes: ["XS", "S", "M", "L", "XL"],
     images: [
-      'https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1574164904299-3a102b110380?auto=format&fit=crop&w=800&q=80',
+      "https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1574164904299-3a102b110380?auto=format&fit=crop&w=800&q=80",
     ],
     featured: true,
     new: false,
   },
   {
     id: 3,
-    name: 'Atelier Blazer',
-    category: 'tailoring',
+    name: "Atelier Blazer",
+    category: "tailoring",
     price: 195000,
-    desc: 'Single-button blazer cut from Italian wool-blend fabric. Unlined for a relaxed modern drape.',
-    sizes: ['XS', 'S', 'M', 'L'],
+    desc: "Single-button blazer cut from Italian wool-blend fabric. Unlined for a relaxed modern drape.",
+    sizes: ["XS", "S", "M", "L"],
     images: [
-      'https://images.unsplash.com/photo-1594938298603-c8148c4dae35?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1598808503742-dd34af65444a?auto=format&fit=crop&w=800&q=80',
+      "https://images.unsplash.com/photo-1594938298603-c8148c4dae35?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1598808503742-dd34af65444a?auto=format&fit=crop&w=800&q=80",
     ],
     featured: true,
     new: false,
   },
   {
     id: 4,
-    name: 'Gucci Leather Bag',
-    category: 'accessories',
+    name: "Gucci Leather Bag",
+    category: "accessories",
     price: 45000,
-    desc: 'Full-grain leather belt with a matte gunmetal buckle. Minimal hardware. Maximum intention.',
-    sizes: ['S/M', 'M/L', 'L/XL'],
+    desc: "Full-grain leather belt with a matte gunmetal buckle. Minimal hardware. Maximum intention.",
+    sizes: ["S/M", "M/L", "L/XL"],
     images: [
-      'https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=800',
-      'https://images.unsplash.com/photo-1614162692292-7ac56d7f7f1e?w=800',
+      "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=800",
+      "https://images.unsplash.com/photo-1614162692292-7ac56d7f7f1e?w=800",
     ],
     featured: true,
     new: false,
@@ -97,56 +97,56 @@ const products = [
 
   {
     id: 5,
-    name: 'Cashmere Wrap Coat',
-    category: 'outerwear',
+    name: "Cashmere Wrap Coat",
+    category: "outerwear",
     price: 320000,
-    desc: 'Pure cashmere wrap coat in deep camel. Self-tie belt. The most luxurious thing you will own.',
-    sizes: ['XS', 'S', 'M', 'L'],
+    desc: "Pure cashmere wrap coat in deep camel. Self-tie belt. The most luxurious thing you will own.",
+    sizes: ["XS", "S", "M", "L"],
     images: [
-      'https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1591047139829-d91aecb6caea?auto=format&fit=crop&w=800&q=80',
+      "https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?auto=format&fit=crop&w=800&q=80",
     ],
     featured: false,
     new: true,
   },
   {
     id: 6,
-    name: 'Wide-Leg Trousers',
-    category: 'tailoring',
+    name: "Wide-Leg Trousers",
+    category: "tailoring",
     price: 125000,
-    desc: 'High-waisted wide-leg trousers in charcoal wool. The silhouette is everything.',
-    sizes: ['XS', 'S', 'M', 'L', 'XL'],
+    desc: "High-waisted wide-leg trousers in charcoal wool. The silhouette is everything.",
+    sizes: ["XS", "S", "M", "L", "XL"],
     images: [
-      'https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1509551388413-e18d0ac5d495?auto=format&fit=crop&w=800&q=80',
+      "https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1509551388413-e18d0ac5d495?auto=format&fit=crop&w=800&q=80",
     ],
     featured: false,
     new: true,
   },
   {
     id: 7,
-    name: 'Merino Cardigan',
-    category: 'knitwear',
+    name: "Merino Cardigan",
+    category: "knitwear",
     price: 78000,
-    desc: 'Oversized merino cardigan with deep pockets. In off-white. Wear it open or closed.',
-    sizes: ['S', 'M', 'L', 'XL'],
+    desc: "Oversized merino cardigan with deep pockets. In off-white. Wear it open or closed.",
+    sizes: ["S", "M", "L", "XL"],
     images: [
-      'https://images.unsplash.com/photo-1614975058789-41316d0e2e9c?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1584273112214-52339504b2d0?auto=format&fit=crop&w=800&q=80',
+      "https://images.unsplash.com/photo-1614975058789-41316d0e2e9c?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1584273112214-52339504b2d0?auto=format&fit=crop&w=800&q=80",
     ],
     featured: false,
     new: false,
   },
   {
     id: 8,
-    name: 'Structured Tote',
-    category: 'accessories',
+    name: "Structured Tote",
+    category: "accessories",
     price: 68000,
-    desc: 'Full-grain leather tote with a structured base. Fits everything. Looks like nothing else.',
-    sizes: ['One Size'],
+    desc: "Full-grain leather tote with a structured base. Fits everything. Looks like nothing else.",
+    sizes: ["One Size"],
     images: [
-      'https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1605733513597-a8f8d410f286?auto=format&fit=crop&w=800&q=80',
+      "https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1605733513597-a8f8d410f286?auto=format&fit=crop&w=800&q=80",
     ],
     featured: false,
     new: false,
@@ -160,7 +160,7 @@ const products = [
 // =====================================================
 
 const formatPrice = (amount) => {
-  return '₦' + amount.toLocaleString('en-NG');
+  return "₦" + amount.toLocaleString("en-NG");
 };
 
 // =====================================================
@@ -173,9 +173,9 @@ const formatPrice = (amount) => {
 const showToast = (message) => {
   if (!toast) return;
   toast.textContent = message;
-  toast.classList.add('show');
+  toast.classList.add("show");
   setTimeout(() => {
-    toast.classList.remove('show');
+    toast.classList.remove("show");
   }, 2500);
 };
 
@@ -191,12 +191,12 @@ const cart = {
   // Read cart from localStorage
   // Returns empty array if nothing saved yet
   get() {
-    return JSON.parse(localStorage.getItem('ember_cart')) || [];
+    return JSON.parse(localStorage.getItem("ember_cart")) || [];
   },
 
   // Save cart array to localStorage
   save(items) {
-    localStorage.setItem('ember_cart', JSON.stringify(items));
+    localStorage.setItem("ember_cart", JSON.stringify(items));
   },
 
   // Add a product to cart
@@ -248,7 +248,7 @@ const cart = {
 
   // Update the cart badge number in navbar
   updateBadge() {
-    const badge = document.getElementById('cartBadge');
+    const badge = document.getElementById("cartBadge");
     if (badge) badge.textContent = this.count();
   },
 };
@@ -298,7 +298,7 @@ const renderFeatured = () => {
 
   // map creates an array of HTML strings
   // join("") combines them into one big string
-  featuredGrid.innerHTML = featured.map((p) => createProductCard(p)).join('');
+  featuredGrid.innerHTML = featured.map((p) => createProductCard(p)).join("");
 };
 
 // =====================================================
@@ -309,14 +309,14 @@ const renderFeatured = () => {
 // and selected sort order!
 // =====================================================
 
-const renderShop = (filterCategory = 'all', sortBy = 'featured') => {
+const renderShop = (filterCategory = "all", sortBy = "featured") => {
   if (!shopGrid) return;
 
   // Step 1 — Filter by category
   // Spread operator [...] creates a copy of the array
   // so we don't accidentally modify the original!
   let filtered =
-    filterCategory === 'all'
+    filterCategory === "all"
       ? [...products]
       : products.filter((p) => p.category === filterCategory);
 
@@ -324,11 +324,11 @@ const renderShop = (filterCategory = 'all', sortBy = 'featured') => {
   // sort() compares two items at a time (a and b)
   // Negative result → a comes first
   // Positive result → b comes first
-  if (sortBy === 'price-asc') {
+  if (sortBy === "price-asc") {
     filtered.sort((a, b) => a.price - b.price);
-  } else if (sortBy === 'price-desc') {
+  } else if (sortBy === "price-desc") {
     filtered.sort((a, b) => b.price - a.price);
-  } else if (sortBy === 'newest') {
+  } else if (sortBy === "newest") {
     filtered.sort((a, b) => b.id - a.id);
   }
 
@@ -343,7 +343,7 @@ const renderShop = (filterCategory = 'all', sortBy = 'featured') => {
   }
 
   // Step 4 — Render the product cards
-  shopGrid.innerHTML = filtered.map((p) => createProductCard(p)).join('');
+  shopGrid.innerHTML = filtered.map((p) => createProductCard(p)).join("");
 };
 
 // =====================================================
@@ -354,29 +354,29 @@ const renderShop = (filterCategory = 'all', sortBy = 'featured') => {
 // =====================================================
 
 const initShopControls = () => {
-  const filterBtns = document.querySelectorAll('.filter-btn');
+  const filterBtns = document.querySelectorAll(".filter-btn");
   if (!filterBtns.length) return;
 
   // Keep track of current filter and sort
-  let activeFilter = 'all';
-  let activeSort = 'featured';
+  let activeFilter = "all";
+  let activeSort = "featured";
 
   filterBtns.forEach((btn) => {
-    btn.addEventListener('click', () => {
+    btn.addEventListener("click", () => {
       // Remove active from all filter buttons
-      filterBtns.forEach((b) => b.classList.remove('active'));
+      filterBtns.forEach((b) => b.classList.remove("active"));
 
       // Add active to clicked button only
-      btn.classList.add('active');
+      btn.classList.add("active");
 
       // Update filter and re-render
-      activeFilter = btn.getAttribute('data-filter');
+      activeFilter = btn.getAttribute("data-filter");
       renderShop(activeFilter, activeSort);
     });
   });
 
   if (sortSelect) {
-    sortSelect.addEventListener('change', () => {
+    sortSelect.addEventListener("change", () => {
       activeSort = sortSelect.value;
       renderShop(activeFilter, activeSort);
     });
@@ -398,14 +398,14 @@ const initProductPage = () => {
   // For example: product.html?id=3
   // params.get("id") returns "3" as a string
   const params = new URLSearchParams(window.location.search);
-  const productId = parseInt(params.get('id'));
+  const productId = parseInt(params.get("id"));
 
   // find() returns the FIRST product matching the id
   const product = products.find((p) => p.id === productId);
 
   // If no product found — redirect to shop
   if (!product) {
-    window.location.href = 'shop.html';
+    window.location.href = "shop.html";
     return;
   }
 
@@ -432,12 +432,12 @@ const initProductPage = () => {
             <img
               src="${img}"
               alt="${product.name} view ${index + 1}"
-              class="${index === 0 ? 'active' : ''}"
+              class="${index === 0 ? "active" : ""}"
               data-index="${index}"
             />
           `,
             )
-            .join('')}
+            .join("")}
         </div>
       </div>
 
@@ -457,7 +457,7 @@ const initProductPage = () => {
             <button class="size-btn" data-size="${size}">${size}</button>
           `,
             )
-            .join('')}
+            .join("")}
         </div>
 
         <!-- Quantity Counter -->
@@ -482,38 +482,38 @@ const initProductPage = () => {
   `;
 
   // Get product page elements AFTER building HTML
-  const mainImage = document.getElementById('mainImage');
-  const thumbs = document.querySelectorAll('.gallery-thumbs img');
-  const sizeButtons = document.querySelectorAll('.size-btn');
-  const qtyMinus = document.getElementById('qtyMinus');
-  const qtyPlus = document.getElementById('qtyPlus');
-  const qtyDisplay = document.getElementById('qtyDisplay');
-  const addToBagBtn = document.getElementById('addToBagBtn');
-  const productMsg = document.getElementById('productMsg');
+  const mainImage = document.getElementById("mainImage");
+  const thumbs = document.querySelectorAll(".gallery-thumbs img");
+  const sizeButtons = document.querySelectorAll(".size-btn");
+  const qtyMinus = document.getElementById("qtyMinus");
+  const qtyPlus = document.getElementById("qtyPlus");
+  const qtyDisplay = document.getElementById("qtyDisplay");
+  const addToBagBtn = document.getElementById("addToBagBtn");
+  const productMsg = document.getElementById("productMsg");
 
   // Thumbnail click — swap main image
   thumbs.forEach((thumb) => {
-    thumb.addEventListener('click', () => {
+    thumb.addEventListener("click", () => {
       // Update main image source
-      mainImage.src = product.images[thumb.getAttribute('data-index')];
+      mainImage.src = product.images[thumb.getAttribute("data-index")];
 
       // Update active thumbnail
-      thumbs.forEach((t) => t.classList.remove('active'));
-      thumb.classList.add('active');
+      thumbs.forEach((t) => t.classList.remove("active"));
+      thumb.classList.add("active");
     });
   });
 
   // Size selection
   sizeButtons.forEach((btn) => {
-    btn.addEventListener('click', () => {
-      sizeButtons.forEach((b) => b.classList.remove('active'));
-      btn.classList.add('active');
-      selectedSize = btn.getAttribute('data-size');
+    btn.addEventListener("click", () => {
+      sizeButtons.forEach((b) => b.classList.remove("active"));
+      btn.classList.add("active");
+      selectedSize = btn.getAttribute("data-size");
     });
   });
 
   // Quantity minus button
-  qtyMinus.addEventListener('click', () => {
+  qtyMinus.addEventListener("click", () => {
     if (quantity > 1) {
       quantity--;
       qtyDisplay.textContent = quantity;
@@ -521,7 +521,7 @@ const initProductPage = () => {
   });
 
   // Quantity plus button
-  qtyPlus.addEventListener('click', () => {
+  qtyPlus.addEventListener("click", () => {
     if (quantity < 10) {
       quantity++;
       qtyDisplay.textContent = quantity;
@@ -529,13 +529,13 @@ const initProductPage = () => {
   });
 
   // Add to bag button
-  addToBagBtn.addEventListener('click', () => {
+  addToBagBtn.addEventListener("click", () => {
     // Size must be selected first
     if (!selectedSize) {
-      productMsg.textContent = 'Please select a size first!';
-      productMsg.className = 'form-msg error';
+      productMsg.textContent = "Please select a size first!";
+      productMsg.className = "form-msg error";
       setTimeout(() => {
-        productMsg.textContent = '';
+        productMsg.textContent = "";
       }, 2500);
       return;
     }
@@ -543,7 +543,7 @@ const initProductPage = () => {
     // Add to cart and show toast
     cart.add(product.id, selectedSize, quantity);
     showToast(`${product.name} added to bag!`);
-    productMsg.textContent = '';
+    productMsg.textContent = "";
   });
 
   // Render related products — same category, different product
@@ -553,7 +553,7 @@ const initProductPage = () => {
       .slice(0, 4);
 
     relatedGrid.innerHTML = related.length
-      ? related.map((p) => createProductCard(p)).join('')
+      ? related.map((p) => createProductCard(p)).join("")
       : `<p style="color: var(--muted);">No related pieces found.</p>`;
   }
 };
@@ -573,7 +573,7 @@ const renderCart = () => {
 
   // Update item count text
   if (cartItemCount) {
-    cartItemCount.textContent = `${items.length} item${items.length !== 1 ? 's' : ''}`;
+    cartItemCount.textContent = `${items.length} item${items.length !== 1 ? "s" : ""}`;
   }
 
   // Show empty cart state if no items
@@ -587,7 +587,7 @@ const renderCart = () => {
       </div>
     `;
 
-    if (cartSummary) cartSummary.innerHTML = '';
+    if (cartSummary) cartSummary.innerHTML = "";
     return;
   }
 
@@ -596,7 +596,7 @@ const renderCart = () => {
     .map((item, index) => {
       // find() gets the full product details using the id
       const product = products.find((p) => p.id === item.productId);
-      if (!product) return '';
+      if (!product) return "";
 
       return `
         <div class="cart-item">
@@ -614,13 +614,13 @@ const renderCart = () => {
         </div>
       `;
     })
-    .join('');
+    .join("");
 
   // Attach remove listeners to all remove buttons
-  const removeButtons = document.querySelectorAll('.remove-btn');
+  const removeButtons = document.querySelectorAll(".remove-btn");
   removeButtons.forEach((btn) => {
-    btn.addEventListener('click', () => {
-      cart.remove(parseInt(btn.getAttribute('data-index')));
+    btn.addEventListener("click", () => {
+      cart.remove(parseInt(btn.getAttribute("data-index")));
       renderCart();
     });
   });
@@ -662,7 +662,7 @@ const renderCart = () => {
 const initNewsletter = () => {
   if (!newsletterForm) return;
 
-  newsletterForm.addEventListener('submit', (e) => {
+  newsletterForm.addEventListener("submit", (e) => {
     e.preventDefault();
 
     const email = emailInput.value.trim();
@@ -672,21 +672,21 @@ const initNewsletter = () => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     if (!email || !emailRegex.test(email)) {
-      formMsg.textContent = 'Please enter a valid email address!';
-      formMsg.className = 'form-msg error';
+      formMsg.textContent = "Please enter a valid email address!";
+      formMsg.className = "form-msg error";
       setTimeout(() => {
-        formMsg.textContent = '';
+        formMsg.textContent = "";
       }, 3000);
       return;
     }
 
     // Valid email — show success!
-    formMsg.textContent = 'Welcome to the atelier. ✦';
-    formMsg.className = 'form-msg success';
+    formMsg.textContent = "Welcome to the atelier. ✦";
+    formMsg.className = "form-msg success";
     newsletterForm.reset();
 
     setTimeout(() => {
-      formMsg.textContent = '';
+      formMsg.textContent = "";
     }, 4000);
   });
 };
@@ -698,46 +698,13 @@ const initNewsletter = () => {
 // WHY: Opens and closes navigation menu!
 // =====================================================
 
-const initHamburger = () => {
-  if (!hamburger || !navLinks) return;
-
-  hamburger.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-    const isOpen = navLinks.classList.contains('active');
-    hamburger.setAttribute('aria-expanded', isOpen);
-    hamburger.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
-
-    // Toggle icon between bars and times
-    const icon = hamburger.querySelector('i');
-    if (icon) {
-      icon.classList.toggle('fa-bars');
-      icon.classList.toggle('fa-times');
-    }
-  });
-
-  // Close menu when any nav link is clicked
-  const allNavLinks = document.querySelectorAll('.nav-link');
-  allNavLinks.forEach((link) => {
-    link.addEventListener('click', () => {
-      navLinks.classList.remove('active');
-      hamburger.setAttribute('aria-expanded', 'false');
-      hamburger.setAttribute('aria-label', 'Open menu');
-      const icon = hamburger.querySelector('i');
-      if (icon) {
-        icon.classList.add('fa-bars');
-        icon.classList.remove('fa-times');
-      }
-    });
-  });
-};
-
 // =====================================================
 // SET CURRENT YEAR IN FOOTER
 // WHY: Automatically shows correct year — never stale!
 // =====================================================
 
 const setCurrentYear = () => {
-  const yearSpans = document.querySelectorAll('.current-year');
+  const yearSpans = document.querySelectorAll(".current-year");
   yearSpans.forEach((span) => {
     span.textContent = new Date().getFullYear();
   });
