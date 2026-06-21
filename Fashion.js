@@ -697,6 +697,32 @@ const initNewsletter = () => {
 // WHEN: User clicks hamburger on mobile
 // WHY: Opens and closes navigation menu!
 // =====================================================
+const initHamburger = () => {
+  hamburger.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+    const icon = hamburger.querySelector("i");
+    icon.classList.toggle("fa-bars");
+    icon.classList.toggle("fa-times");
+  });
+
+  // Close menu when any nav link is clicked
+  document.querySelectorAll(".nav-link").forEach((link) => {
+    link.addEventListener("click", () => {
+      navLinks.classList.remove("active");
+      hamburger.querySelector("i").classList.add("fa-bars");
+      hamburger.querySelector("i").classList.remove("fa-times");
+    });
+  });
+
+  // Close menu when user clicks anywhere outside navbar
+  document.addEventListener("click", (e) => {
+    if (!navbar.contains(e.target)) {
+      navLinks.classList.remove("active");
+      hamburger.querySelector("i").classList.add("fa-bars");
+      hamburger.querySelector("i").classList.remove("fa-times");
+    }
+  });
+};
 
 // =====================================================
 // SET CURRENT YEAR IN FOOTER
